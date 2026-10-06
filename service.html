@@ -30,6 +30,15 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+<style>
+.services_description { max-width: 720px; margin: 16px auto 8px; color: #334155; font-size: 18px; line-height: 1.8; text-align: center; }
+.service_section .row > div { display: flex; }
+.service_section .box { width: 100%; min-height: 390px; height: auto; }
+.service_section .box .detail-box { flex: 1; display: flex; flex-direction: column; width: 100%; }
+.service_section .box .detail-box h4 { min-height: 58px; }
+.service_section .box .detail-box p { line-height: 1.7; }
+.service_section .box .detail-box a { margin-top: auto; padding-top: 16px; }
+</style>
 </head>
 
 <body class="sub_page">
@@ -48,13 +57,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
               <li class="nav-item ">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="service.html">Services</a>
+                <a class="nav-link" href="service.html" aria-current="page">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="price.html">Pricing</a>
@@ -85,140 +94,12 @@
 
   <!-- service section -->
 
-  <section class="service_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Our Services
-        </h2>
-      </div>
-    </div>
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/cctv-camera.svg" alt="CCTV security camera">
-            </div>
-            <div class="detail-box">
-              <h4>
-                CCTV Services
-              </h4>
-              <p>
-                Protect your premises with professionally installed CCTV cameras, remote monitoring, and reliable video recording.
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Dedicated Hosting
-              </h4>
-              <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 ">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Cloud Hosting
-              </h4>
-              <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                VPS Hosting
-              </h4>
-              <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Wordpress Hosting
-              </h4>
-              <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/s6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Domain Name
-              </h4>
-              <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
-              </p>
-              <a href="contact.html">
-                Contact Us
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <section class="service_section layout_padding"><div class="container"><div class="heading_container heading_center"><h2>Our IT Services</h2><p class="services_description">Practical technology solutions for businesses in Suriname. From everyday IT support to security and connectivity, we help your systems work together.</p></div><div class="row"><div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/managed-it.svg" alt=""></div><div class="detail-box"><h4>Managed IT Services</h4><p>Keep your business running with day-to-day IT support, software updates, system monitoring, and practical security measures.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/s2.png" alt=""></div><div class="detail-box"><h4>Network Management</h4><p>Connect your team with a reliable network. We help with network setup, Wi-Fi, maintenance, and troubleshooting.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/voip-phone.svg" alt=""></div><div class="detail-box"><h4>VoIP Services</h4><p>Improve business communication with internet-based telephone systems, call routing, and support for your office phones.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/backup-recovery.svg" alt=""></div><div class="detail-box"><h4>Backup & Disaster Recovery</h4><p>Protect business data with managed backups and recovery planning, so you can restore essential files and systems when needed.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/cctv-security.svg" alt=""></div><div class="detail-box"><h4>CCTV Systems</h4><p>Protect your premises with professionally installed security cameras, remote viewing, and reliable video recording.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="box"><div class="img-box"><img src="images/structured-cabling.svg" alt=""></div><div class="detail-box"><h4>Structured Cabling</h4><p>Build a dependable foundation for your network with organized data cabling, patch panels, and connections for your equipment.</p><a href="contact.html">Contact Us <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div></div></div></div></div></section>
   <!-- end service section -->
 
 
@@ -262,7 +143,7 @@
               <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
             <a href="https://www.instagram.com/bitwise_msp/">
-              <i class="fa fa-instagram" aria-hidden="true"></i>>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
           </div>
         </div>
