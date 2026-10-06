@@ -29,6 +29,12 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+<style>
+.whatsapp_chat { position: fixed; bottom: 22px; right: 22px; z-index: 1000; display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 30px; background: #187d3d; color: #fff; box-shadow: 0 3px 12px #0003; font-weight: 700; }
+.whatsapp_chat:hover, .whatsapp_chat:focus { background: #11612e; color: #fff; }
+.whatsapp_chat .fa { font-size: 25px; }
+@media (max-width: 575px) { .whatsapp_chat { bottom: 16px; right: 16px; padding: 10px 14px; } }
+</style>
 </head>
 
 <body>
@@ -469,5 +475,6 @@
 })();
 </script>
 
+<a class="whatsapp_chat" href="https://wa.me/5977238113" target="_blank" rel="noopener noreferrer" aria-label="Chat with Bitwise MSP on WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
 </body>
 </html>
