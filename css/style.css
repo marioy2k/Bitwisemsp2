@@ -1056,3 +1056,8 @@ a:focus {
 .about_section .detail-box p,.about_section .detail-box li{color:#334155;font-size:16px;line-height:1.75;}
 .about_section .detail-box h2,.about_section .detail-box h3{color:#17243a;}
 .about_section .detail-box h3{font-size:22px;margin-top:26px;}
+
+/* Comfortable About Us reading rhythm. */
+.about_section .detail-box p{font-size:18px;line-height:1.8;color:#334155;margin:0 0 20px;max-width:62ch;}
+.about_section .detail-box h2{margin-bottom:24px;}
+.about_section .detail-box h3{margin-top:24px;margin-bottom:12px;}
