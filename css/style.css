@@ -1050,3 +1050,9 @@ a:focus {
 .service_section .box .detail-box p{min-height:96px;}
 .service_section .box .detail-box a{margin-top:auto;}
 @media(max-width:575px){.service_section .box{min-height:350px;}}
+
+/* Readable About Us text on the light page background. */
+.about_section{color:#17243a;}
+.about_section .detail-box p,.about_section .detail-box li{color:#334155;font-size:16px;line-height:1.75;}
+.about_section .detail-box h2,.about_section .detail-box h3{color:#17243a;}
+.about_section .detail-box h3{font-size:22px;margin-top:26px;}
