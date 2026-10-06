@@ -283,11 +283,19 @@ document.getElementById('cart-total').textContent='Total: US
 </html>
 +total.toFixed(2)+(installation.checked?' + configuration / installation quote':'');
 document.getElementById('payment-note').textContent=installation.checked?'Request the full quote before making payment.':currency.value==='SRD'?'Confirm the CME rate and SRD total with us before payment.':'Pay by USD bank transfer after confirming availability.';
-var message='Hi Bitwise MSP, I would like to order:\n'+count+' × MikroTik CSS326-24G-2S+RM @ US$178\n'+(delivery?'Delivery within Paramaribo: US$15':'Pickup: free')+'\nProduct and delivery total: US
+var message = ['Hi Bitwise MSP, I would like to order:', count + ' x MikroTik CSS326-24G-2S+RM @ US$178', delivery ? 'Delivery within Paramaribo: US$15' : 'Pickup: free', 'Product and delivery total: US.href='https://wa.me/5977238113?text='+encodeURIComponent(message);
+}
+document.getElementById('add-cart').addEventListener('click',function(){if(count>=2){document.getElementById('cart-status').textContent='Maximum available quantity is 2.';}else{count++;document.getElementById('cart-status').textContent='Product added to cart.';}render();document.getElementById('cart').scrollIntoView({behavior:'smooth'});});
+document.getElementById('remove-cart').addEventListener('click',function(){count=0;render();});
+quantity.addEventListener('change',function(){count=Math.max(1,Math.min(2,parseInt(quantity.value)||1));render();});
+[fulfilment,installation,currency].forEach(function(el){el.addEventListener('change',render);});
+render();
+})();
+</script></body>
 
 
 </html>
-+total.toFixed(2)+'\nPayment currency: '+currency.value+(currency.value==='SRD'?' — please confirm the CME rate and SRD total':'')+'\nConfiguration / installation: '+(installation.checked?'requested — please provide a quote':'not requested')+'\nPlease confirm availability and bank account holder. I will attach my transfer receipt here after payment.';
+ + total.toFixed(2), 'Payment currency: ' + currency.value, installation.checked ? 'Configuration / installation requested. Please provide the full quote before payment.' : 'No installation requested.', currency.value === 'SRD' ? 'Please confirm the CME exchange rate and SRD total.' : 'USD bank transfer.', 'Please confirm availability and the bank account holder. I will attach my transfer receipt after payment.'].join(String.fromCharCode(10));
 document.getElementById('checkout-whatsapp').href='https://wa.me/5977238113?text='+encodeURIComponent(message);
 }
 document.getElementById('add-cart').addEventListener('click',function(){if(count>=2){document.getElementById('cart-status').textContent='Maximum available quantity is 2.';}else{count++;document.getElementById('cart-status').textContent='Product added to cart.';}render();document.getElementById('cart').scrollIntoView({behavior:'smooth'});});
