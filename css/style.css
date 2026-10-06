@@ -1036,3 +1036,8 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+/* Official supplied logo: frame away the image margins without changing the artwork. */
+.custom_nav-container .official-brand{position:relative;display:block;width:300px;height:64px;overflow:hidden;flex-shrink:0;margin-right:20px;mix-blend-mode:screen;}
+.custom_nav-container .official-brand img{position:absolute;width:136%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-50%);}
+@media(max-width:575px){.custom_nav-container .official-brand{width:235px;height:52px;margin-right:8px;}}
+@media(max-width:360px){.custom_nav-container .official-brand{width:195px;height:44px;}}
