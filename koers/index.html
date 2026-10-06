@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Koers | Bitwise MSP</title><style>
 body{margin:0;background:#f4f6f9;color:#17243a;font-family:Arial,sans-serif}main{max-width:600px;margin:60px auto;padding:30px;background:white;border-radius:12px;box-shadow:0 4px 20px #0001}h1{margin-top:0}.rate{font-size:36px;font-weight:bold;color:#087c9c}dl{display:grid;grid-template-columns:1fr 1fr;gap:18px}dd{margin:0;text-align:right}button{padding:12px 20px;background:#17243a;color:white;border:0;border-radius:6px;cursor:pointer}#status{line-height:1.6;color:#475569}@media(max-width:650px){main{margin:20px;padding:24px}.rate{font-size:30px}}
-</style></head><body><main><h1>USD / SRD koers</h1><p>Bitwise MSP shopkoers</p><p id="shop" class="rate">Laden…</p><dl><dt>Laatst opgehaald</dt><dd id="updated">—</dd></dl><p id="status" role="status" aria-live="polite">Koers wordt elk uur automatisch opgehaald.</p><button id="refresh">Vernieuwen</button></main><script>
+</style><link rel="icon" href="/images/bitwise-favicon.svg" type="image/svg+xml"></head><body><main><h1>USD / SRD koers</h1><p>Bitwise MSP shopkoers</p><p id="shop" class="rate">Laden…</p><dl><dt>Laatst opgehaald</dt><dd id="updated">—</dd></dl><p id="status" role="status" aria-live="polite">Koers wordt elk uur automatisch opgehaald.</p><button id="refresh">Vernieuwen</button></main><script>
 (function(){
 var button=document.getElementById('refresh');
 var money=function(n){return n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2});};
