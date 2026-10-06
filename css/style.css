@@ -1041,3 +1041,12 @@ a:focus {
 .custom_nav-container .official-brand img{position:absolute;width:128%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-50%);}
 @media(max-width:575px){.custom_nav-container .official-brand{width:235px;height:52px;margin-right:8px;}}
 @media(max-width:360px){.custom_nav-container .official-brand{width:195px;height:44px;}}
+
+/* Uniform service cards across rows; stack naturally on small screens. */
+.service_section .row > [class*="col-"]{display:flex;}
+.service_section .box{width:100%;min-height:350px;display:flex;flex-direction:column;align-items:center;}
+.service_section .box .detail-box{flex:1;width:100%;display:flex;flex-direction:column;align-items:center;}
+.service_section .box .detail-box h4{min-height:54px;display:flex;align-items:center;justify-content:center;}
+.service_section .box .detail-box p{min-height:96px;}
+.service_section .box .detail-box a{margin-top:auto;}
+@media(max-width:575px){.service_section .box{min-height:350px;}}
