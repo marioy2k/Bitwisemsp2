@@ -60,7 +60,7 @@
 .product_stock { color: #187d3d; font-weight: 700; }
 .product_order { display: inline-block; background: #187d3d; color: white; padding: 12px 20px; border-radius: 6px; }
 .product_order:hover { background: #11612e; color: white; }
-</style><style>.product_share { display: block; margin-top: 14px; padding: 11px 20px; border: 1px solid #17243a; border-radius: 6px; color: #17243a; background: #fff; cursor: pointer; } .product_share:hover { background: #edf2f7; } #share-status { margin: 10px 0 0; font-size: 14px; overflow-wrap: anywhere; }</style></head>
+</style><style>.product_share { display: block; margin-top: 14px; padding: 11px 20px; border: 1px solid #17243a; border-radius: 6px; color: #17243a; background: #fff; cursor: pointer; } .product_share:hover { background: #edf2f7; } #share-status { margin: 10px 0 0; font-size: 14px; overflow-wrap: anywhere; }</style><style>.product_gallery img { display: block; width: 100%; height: 230px; object-fit: contain; } .gallery_controls { display:flex; align-items:center; justify-content:center; gap:18px; padding: 8px 12px; } .gallery_controls button { background:#17243a; color:#fff; border:0; border-radius:50%; width:38px; height:38px; font-size:26px; cursor:pointer; } .gallery_controls button:hover { background:#087c9c; } #photo-caption { font-size:14px; color:#334155; }</style></head>
 
 <body class="sub_page">
 
@@ -116,7 +116,7 @@
 
   <!-- service section -->
 
-  <section class="shop_section layout_padding"><div class="container"><h1>Shop</h1><p class="shop_intro">Browse our products and contact us on WhatsApp to place an order.</p><div class="row"><div class="col-md-8 col-lg-6"><article id="mikrotik-css326" class="product_card"><img src="images/mikrotik-css326.svg" width="1280" height="629" alt="MikroTik CSS326-24G-2S+RM rackmount switch"><div class="product_content"><p class="product_category">NETWORK SWITCHES</p><h2>MikroTik CSS326-24G-2S+RM</h2><p>Managed Cloud Smart Switch with 24 Gigabit Ethernet ports and two 10G SFP+ ports, powered by SwOS.</p><ul><li>24 × Gigabit Ethernet ports</li><li>2 × 10G SFP+ ports</li><li>1U rackmount design</li><li>Passive PoE-in power support</li></ul><p class="product_note">PoE-in powers the switch; it does not supply PoE to connected devices.</p><p class="product_price">$178</p><p class="product_stock">In stock — 2 available</p><a class="product_order" href="https://wa.me/5977238113?text=Hi%20Bitwise%20MSP%2C%20I%20would%20like%20to%20order%20the%20MikroTik%20CSS326-24G-2S%2BRM%20(%24178).%20Is%20it%20still%20available%3F" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a><button type="button" class="product_share" id="share-product"><i class="fa fa-share-alt" aria-hidden="true"></i> Share product</button><p id="share-status" role="status" aria-live="polite"></p></div></article></div></div></div></section>
+  <section class="shop_section layout_padding"><div class="container"><h1>Shop</h1><p class="shop_intro">Browse our products and contact us on WhatsApp to place an order.</p><div class="row"><div class="col-md-8 col-lg-6"><article id="mikrotik-css326" class="product_card"><div class="product_gallery" aria-label="Product photos"><img id="switch-photo" src="images/mikrotik-css326.svg" width="1280" height="629" alt="MikroTik CSS326-24G-2S+RM — front view"><div class="gallery_controls"><button type="button" id="photo-prev" aria-label="Previous product photo">‹</button><span id="photo-caption" aria-live="polite">Front view · 1 / 2</span><button type="button" id="photo-next" aria-label="Next product photo">›</button></div></div><div class="product_content"><p class="product_category">NETWORK SWITCHES</p><h2>MikroTik CSS326-24G-2S+RM</h2><p>Managed Cloud Smart Switch with 24 Gigabit Ethernet ports and two 10G SFP+ ports, powered by SwOS.</p><ul><li>24 × Gigabit Ethernet ports</li><li>2 × 10G SFP+ ports</li><li>1U rackmount design</li><li>Passive PoE-in power support</li></ul><p class="product_note">PoE-in powers the switch; it does not supply PoE to connected devices.</p><p class="product_price">$178</p><p class="product_stock">In stock — 2 available</p><a class="product_order" href="https://wa.me/5977238113?text=Hi%20Bitwise%20MSP%2C%20I%20would%20like%20to%20order%20the%20MikroTik%20CSS326-24G-2S%2BRM%20(%24178).%20Is%20it%20still%20available%3F" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp</a><button type="button" class="product_share" id="share-product"><i class="fa fa-share-alt" aria-hidden="true"></i> Share product</button><p id="share-status" role="status" aria-live="polite"></p></div></article></div></div></div></section>
 
 
   <!-- info section -->
@@ -252,6 +252,20 @@ document.getElementById('share-product').addEventListener('click', async functio
     var link = document.createElement('a'); link.href = data.url; link.textContent = data.url; status.appendChild(link);
   }
 });
+</script><script>
+(function () {
+var photos = [{src:'images/mikrotik-css326.svg', label:'Front view'}, {src:'images/mikrotik-css326-back.svg', label:'Rear view'}];
+var current = 0;
+function showPhoto(step) {
+current = (current + step + photos.length) % photos.length;
+var image = document.getElementById('switch-photo');
+image.src = photos[current].src;
+image.alt = 'MikroTik CSS326-24G-2S+RM — ' + photos[current].label.toLowerCase();
+document.getElementById('photo-caption').textContent = photos[current].label + ' · ' + (current + 1) + ' / ' + photos.length;
+}
+document.getElementById('photo-prev').addEventListener('click', function () { showPhoto(-1); });
+document.getElementById('photo-next').addEventListener('click', function () { showPhoto(1); });
+})();
 </script></body>
 
 
