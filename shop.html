@@ -269,42 +269,20 @@ document.getElementById('photo-next').addEventListener('click', function () { sh
 })();
 </script><script>
 (function(){
-var quantity=document.getElementById('quantity'), fulfilment=document.getElementById('fulfilment'), installation=document.getElementById('installation'), currency=document.getElementById('currency');
-var count=0; try { count=Math.min(2,Math.max(0,parseInt(localStorage.getItem('bitwise-cart-css326'))||0)); } catch(e){}
+var q=document.getElementById('quantity'), f=document.getElementById('fulfilment'), i=document.getElementById('installation'), cur=document.getElementById('currency'), n=0;
+try{n=Math.min(2,Math.max(0,parseInt(localStorage.getItem('bitwise-cart-css326'))||0));}catch(e){}
 function render(){
-quantity.value=count||1;
-document.getElementById('cart-empty').hidden=count>0;
-document.getElementById('cart-items').hidden=count===0;
-try {localStorage.setItem('bitwise-cart-css326',String(count));}catch(e){}
-var delivery=fulfilment.value==='delivery'?15:0,total=count*178+delivery;
-document.getElementById('cart-total').textContent='Total: US
-
-
-</html>
-+total.toFixed(2)+(installation.checked?' + configuration / installation quote':'');
-document.getElementById('payment-note').textContent=installation.checked?'Request the full quote before making payment.':currency.value==='SRD'?'Confirm the CME rate and SRD total with us before payment.':'Pay by USD bank transfer after confirming availability.';
-var message = ['Hi Bitwise MSP, I would like to order:', count + ' x MikroTik CSS326-24G-2S+RM @ US$178', delivery ? 'Delivery within Paramaribo: US$15' : 'Pickup: free', 'Product and delivery total: US.href='https://wa.me/5977238113?text='+encodeURIComponent(message);
-}
-document.getElementById('add-cart').addEventListener('click',function(){if(count>=2){document.getElementById('cart-status').textContent='Maximum available quantity is 2.';}else{count++;document.getElementById('cart-status').textContent='Product added to cart.';}render();document.getElementById('cart').scrollIntoView({behavior:'smooth'});});
-document.getElementById('remove-cart').addEventListener('click',function(){count=0;render();});
-quantity.addEventListener('change',function(){count=Math.max(1,Math.min(2,parseInt(quantity.value)||1));render();});
-[fulfilment,installation,currency].forEach(function(el){el.addEventListener('change',render);});
-render();
-})();
-</script></body>
-
-
-</html>
- + total.toFixed(2), 'Payment currency: ' + currency.value, installation.checked ? 'Configuration / installation requested. Please provide the full quote before payment.' : 'No installation requested.', currency.value === 'SRD' ? 'Please confirm the CME exchange rate and SRD total.' : 'USD bank transfer.', 'Please confirm availability and the bank account holder. I will attach my transfer receipt after payment.'].join(String.fromCharCode(10));
+q.value=n||1;document.getElementById('cart-empty').hidden=n>0;document.getElementById('cart-items').hidden=n===0;
+try{localStorage.setItem('bitwise-cart-css326',String(n));}catch(e){}
+var fee=f.value==='delivery'?15:0,total=n*178+fee;
+document.getElementById('cart-total').textContent='Total: USD '+total.toFixed(2)+(i.checked?' + installation quote':'');
+document.getElementById('payment-note').textContent=i.checked?'Request the full quote before payment.':cur.value==='SRD'?'Confirm the CME USD selling rate and SRD total before payment.':'Confirm availability before your USD bank transfer.';
+var message=['Hi Bitwise MSP, I would like to order:',n+' x MikroTik CSS326-24G-2S+RM at USD 178',fee?'Delivery within Paramaribo: USD 15':'Pickup: free','Total: USD '+total.toFixed(2),'Currency: '+cur.value,i.checked?'Please quote configuration / installation.':'No installation requested.',cur.value==='SRD'?'Please confirm the CME selling rate and SRD total.':'Payment by USD bank transfer.','Please confirm availability and account holder. I will attach my transfer receipt after payment.'].join(String.fromCharCode(10));
 document.getElementById('checkout-whatsapp').href='https://wa.me/5977238113?text='+encodeURIComponent(message);
 }
-document.getElementById('add-cart').addEventListener('click',function(){if(count>=2){document.getElementById('cart-status').textContent='Maximum available quantity is 2.';}else{count++;document.getElementById('cart-status').textContent='Product added to cart.';}render();document.getElementById('cart').scrollIntoView({behavior:'smooth'});});
-document.getElementById('remove-cart').addEventListener('click',function(){count=0;render();});
-quantity.addEventListener('change',function(){count=Math.max(1,Math.min(2,parseInt(quantity.value)||1));render();});
-[fulfilment,installation,currency].forEach(function(el){el.addEventListener('change',render);});
-render();
+document.getElementById('add-cart').onclick=function(){n=Math.min(2,n+1);render();document.getElementById('cart-status').textContent='Cart updated. Maximum quantity: 2.';document.getElementById('cart').scrollIntoView();};
+document.getElementById('remove-cart').onclick=function(){n=0;render();};
+q.onchange=function(){n=Math.max(1,Math.min(2,parseInt(q.value)||1));render();};
+[f,i,cur].forEach(function(e){e.onchange=render;});render();
 })();
-</script></body>
-
-
-</html>
+</script></body></html>
