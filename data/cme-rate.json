@@ -1,9 +1,9 @@
 {
   "source": "https://www.cme.sr/",
   "rate_type": "USD cash selling rate",
-  "base_rate": 37.8,
+  "base_rate": 37.7,
   "markup_srd_per_usd": 1.25,
-  "shop_rate": 39.05,
+  "shop_rate": 38.95,
   "source_date": "2026-11-03",
-  "fetched_at": "2026-11-03T09:29:23.876672+00:00"
+  "fetched_at": "2026-11-03T17:49:56.399346+00:00"
 }
