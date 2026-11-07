@@ -9,7 +9,7 @@ async function load(){
 button.disabled=true;document.getElementById('status').textContent='Koers ophalen…';
 var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},10000);
 try{
-var response=await fetch('https://raw.githubusercontent.com/marioy2k/Bitwisemsp2/main/data/cme-rate.json?t='+Date.now(),{cache:'no-store',signal:controller.signal});
+var response=await fetch('/data/cme-rate.json?t='+Date.now(),{cache:'no-store',signal:controller.signal});
 if(!response.ok)throw Error();
 var r=await response.json(),age=Date.now()-Date.parse(r.fetched_at),sourceAge=Date.now()-Date.parse(r.source_date+'T00:00:00Z');
 if(!Number.isFinite(r.base_rate)||r.base_rate<1||r.base_rate>1000||r.markup_srd_per_usd!==1.75||Math.abs(r.shop_rate-r.base_rate-1.75)>0.000001||!Number.isFinite(age)||age< -300000||!Number.isFinite(sourceAge))throw Error();
