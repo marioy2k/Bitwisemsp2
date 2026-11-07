@@ -12,7 +12,7 @@ try{
 var response=await fetch('/data/cme-rate.json?t='+Date.now(),{cache:'no-store',signal:controller.signal});
 if(!response.ok)throw Error();
 var r=await response.json(),age=Date.now()-Date.parse(r.fetched_at),sourceAge=Date.now()-Date.parse(r.source_date+'T00:00:00Z');
-if(!Number.isFinite(r.base_rate)||r.base_rate<1||r.base_rate>1000||r.markup_srd_per_usd!==1.75||Math.abs(r.shop_rate-r.base_rate-1.75)>0.000001||!Number.isFinite(age)||age< -300000||!Number.isFinite(sourceAge))throw Error();
+if(!Number.isFinite(r.base_rate)||r.base_rate<1||r.base_rate>1000||r.markup_srd_per_usd!==1.25||Math.abs(r.shop_rate-r.base_rate-1.25)>0.000001||!Number.isFinite(age)||age< -300000||!Number.isFinite(sourceAge))throw Error();
 
 document.getElementById('shop').textContent='1 USD = SRD '+money(r.shop_rate);
 
