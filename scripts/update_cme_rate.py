@@ -19,8 +19,8 @@ def build_rate(rows, now):
         'source': 'https://www.cme.sr/',
         'rate_type': 'USD cash selling rate',
         'base_rate': float(rate),
-        'markup_srd_per_usd': 1.25,
-        'shop_rate': float(rate + Decimal('1.25')),
+        'markup_srd_per_usd': 1.75,
+        'shop_rate': float(rate + Decimal('1.75')),
         'source_date': date.isoformat(),
         'fetched_at': now.isoformat(),
     }

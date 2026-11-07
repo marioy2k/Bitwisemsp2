@@ -285,7 +285,7 @@ try{n=Math.min(2,Math.max(0,parseInt(localStorage.getItem('bitwise-cart-css326')
 try{h=Math.min(1,Math.max(0,parseInt(localStorage.getItem('bitwise-cart-hik7108'))||0));}catch(e){}
 function validRate(r){
 var age=Date.now()-Date.parse(r.fetched_at), sourceAge=Date.now()-Date.parse(r.source_date+'T00:00:00Z');
-return Number.isFinite(r.base_rate)&&r.base_rate>=1&&r.base_rate<=1000&&r.markup_srd_per_usd===1.25&&Math.abs(r.shop_rate-r.base_rate-1.25)<0.000001&&age>=-300000&&age<=10800000&&sourceAge>=-86400000&&sourceAge<=345600000;
+return Number.isFinite(r.base_rate)&&r.base_rate>=1&&r.base_rate<=1000&&r.markup_srd_per_usd===1.75&&Math.abs(r.shop_rate-r.base_rate-1.75)<0.000001&&age>=-300000&&age<=10800000&&sourceAge>=-86400000&&sourceAge<=345600000;
 }
 function render(){
 document.getElementById('cart-count').textContent=String(n+h);
