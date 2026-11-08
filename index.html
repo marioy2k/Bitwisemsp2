@@ -70,11 +70,6 @@
               </li>
             </ul>
             <div class="quote_btn-container">
-              <form class="form-inline">
-                <button class="btn   nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
               <a href="tel:+5977238113">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
@@ -289,21 +284,21 @@
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
           <div class="form_container">
-            <form action="">
+            <form action="https://formspree.io/f/xpwawpka" method="post">
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Your Name" name="fullName" required/>
               </div>
               <div>
-                <input type="email" placeholder="Your Email" />
+                <input type="email" placeholder="Your Email" name="email" required/>
               </div>
               <div>
-                <input type="text" placeholder="Your Phone" />
+                <input type="text" placeholder="Your Phone" name="phone" required/>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" name="message" required/>
               </div>
               <div class="btn_box ">
-                <button>
+                <button type="submit">
                   SEND
                 </button>
               </div>
@@ -330,17 +325,8 @@
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
+  <script src="js/custom.js?v=audit-fixes"></script>
 
-  <script src="https://support.bitwisesr.com/assets/chat/chat-no-jquery.min.js"></script>
-<script>
-(function() {
-  new ZammadChat({
-    fontSize: '12px',
-    chatId: 1
-  });
-})();
-</script>
 
 <a class="whatsapp_chat" href="https://wa.me/5977238113" target="_blank" rel="noopener noreferrer" aria-label="Chat with Bitwise MSP on WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
 </body>
