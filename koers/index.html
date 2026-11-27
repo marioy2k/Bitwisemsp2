@@ -17,7 +17,7 @@ if(!Number.isFinite(r.base_rate)||r.base_rate<1||r.base_rate>1000||r.markup_srd_
 document.getElementById('shop').textContent='1 USD = SRD '+money(r.shop_rate);
 
 document.getElementById('updated').textContent=new Date(r.fetched_at).toLocaleString('nl-NL',{timeZone:'America/Paramaribo'})+' (Suriname)';
-document.getElementById('status').textContent=age>10800000||sourceAge>345600000?'Let op: deze koers is verouderd. De shop vraagt om bevestiging van het SRD-bedrag.':'Actuele koers. Automatische update elk uur. Vernieuwen leest de laatst opgeslagen koers.';
+document.getElementById('status').textContent=age>10800000||sourceAge>345600000?'':'Actuele koers. Automatische update elk uur. Vernieuwen leest de laatst opgeslagen koers.';
 }catch(e){document.getElementById('shop').textContent='Koers niet beschikbaar';document.getElementById('updated').textContent='—';document.getElementById('status').textContent='Ophalen mislukt. Probeer later opnieuw.';}finally{clearTimeout(timer);button.disabled=false;}
 }
 button.addEventListener('click',load);load();setInterval(load,300000);
